@@ -1,0 +1,9 @@
+@import url(layout.css);
+
+.hero{
+     background-color: var(--cor-alternativa);
+
+     height: 90vh;
+
+
+}
