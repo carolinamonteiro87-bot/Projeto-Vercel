@@ -1,9 +1,356 @@
 @import url(layout.css);
 
-.hero{
-     background-color: var(--cor-alternativa);
+.hero {
+display: flex;
+align-items: center;
+justify-content: space-between;
+min-height: 100vh;
+padding: 120px 50px 60px 50px;
+background-color: var(--cor-amarela);
+}
 
-     height: 90vh;
+.heroTexto {
+width: 50%;
+}
 
+.heroTag {
+background-color: var(--cor-branca);
+color: var(--cor-vermelho);
+font-weight: bold;
+width: fit-content;
+padding: 6px 16px;
+margin-bottom: 20px;
+border-radius: 20px;
+}
 
+.heroTitulo {
+color: var(--cor-vermelho);
+font-family: "Fonte Titulo";
+font-size: 56px;
+font-weight: 300;
+line-height: 1.3;
+margin-bottom: 20px;
+}
+
+.heroSubtitulo {
+margin-bottom: 35px;
+font-size: large;
+}
+
+.botao {
+display: inline-block;
+background-color: var(--cor-vermelho);
+color: var(--cor-branca);
+border: 2px solid var(--cor-vermelho);
+border-radius: 30px;
+padding: 14px 30px;
+font-weight: bold;
+transition: 300ms;
+}
+
+.botaoSecundario {
+margin-left: 10px;
+background-color: transparent;
+color: var(--cor-vermelho);
+}
+
+.botao:hover {
+background-color: #742b2c;
+border-color: #742b2c;
+transform: translateY(-3px);
+}
+
+.botaoSecundario:hover {
+background-color: var(--cor-vermelho);
+border-color: var(--cor-vermelho);
+color: var(--cor-branca);
+}
+
+.heroImagem {
+width: 45%;
+display: flex;
+justify-content: center;
+position: relative;
+}
+
+.circulo {
+width: 380px;
+height: 380px;
+border: 10px solid var(--cor-branca);
+border-radius: 50%;
+overflow: hidden;
+position: relative;
+}
+
+.madoka {
+position: absolute;
+width: 80%;
+bottom: 0;
+left: 10%;
+transform: translateY(-6.5%) scale(-0.75, 0.75);
+z-index: 2;
+}
+
+.pao {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+z-index: 1;
+}
+
+.selo {
+position: absolute;
+bottom: 20px;
+right: 60px;
+z-index: 3;
+height: 100px;
+width: 100px;
+background-color: var(--cor-azul);
+border: 5px solid var(--cor-branca);
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+font-weight: bold;
+transform: rotate(-12deg);
+}
+
+.historia {
+padding: 100px 50px;
+background-color: var(--cor-branca);
+}
+
+.tituloSecao {
+margin-bottom: 50px;
+font-family: "Fonte Titulo";
+font-size: 42px;
+font-weight: 300;
+text-align: center;
+color: var(--cor-vermelho);
+}
+
+.historiaConteudo {
+display: flex;
+align-items: center;
+gap: 50px;
+}
+
+.historiaTexto {
+width: 50%;
+}
+
+.historiaTexto p {
+margin-bottom: 20px;
+font-size: 17px;
+line-height: 1.8;
+}
+
+.historiaCards {
+width: 50%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+gap: 20px;
+}
+
+.card {
+width: 45%;
+padding: 25px;
+background-color: var(--cor-rosa);
+border-radius: 15px;
+text-align: center;
+transition: 300ms;
+}
+
+.card:hover {
+transform: scale(1.05);
+}
+
+.cardNumero {
+display: block;
+margin-bottom: 10px;
+font-size: 32px;
+font-weight: bold;
+color: var(--cor-vermelho);
+}
+
+.cardAzul {
+background-color: var(--cor-azul);
+}
+
+.cardAmarelo {
+background-color: var(--cor-amarela);
+}
+
+.comoChegar {
+padding: 100px 50px;
+background-color: var(--cor-azul);
+}
+
+.comoChegarConteudo {
+display: flex;
+gap: 40px;
+}
+
+.mapa {
+width: 60%;
+}
+
+.mapa iframe {
+display: block;
+width: 100%;
+height: 420px;
+border: 6px solid var(--cor-branca);
+border-radius: 15px;
+}
+
+.infoEndereco {
+width: 40%;
+padding: 35px;
+background-color: var(--cor-branca);
+border-radius: 15px;
+}
+
+.infoEndereco h3 {
+margin-bottom: 8px;
+font-size: 20px;
+color: var(--cor-vermelho);
+}
+
+.infoEndereco p {
+margin-bottom: 25px;
+line-height: 1.6;
+}
+
+.contato {
+padding: 100px 50px;
+background-color: var(--cor-rosa);
+}
+
+.contato .tituloSecao {
+margin-bottom: 15px;
+}
+
+.contatoTexto {
+margin-bottom: 40px;
+font-size: 17px;
+text-align: center;
+}
+
+.formulario {
+display: flex;
+flex-direction: column;
+max-width: 600px;
+margin: 0 auto;
+padding: 40px;
+background-color: var(--cor-branca);
+border-radius: 20px;
+box-shadow: 0px 10px 30px rgba(158, 68, 70, 0.2);
+}
+
+.formulario label {
+margin-bottom: 6px;
+font-weight: bold;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+margin-bottom: 20px;
+padding: 12px;
+border: 2px solid var(--cor-azul);
+border-radius: 8px;
+font-family: inherit;
+font-size: 15px;
+color: var(--cor-roxa);
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+outline: none;
+border-color: var(--cor-vermelho);
+}
+
+.formulario textarea {
+height: 130px;
+resize: vertical;
+}
+
+.botaoEnviar {
+margin-top: 10px;
+font-family: inherit;
+font-size: 16px;
+cursor: pointer;
+}
+
+@media (max-width: 768px) {
+.hero {
+flex-direction: column;
+padding: 190px 20px 60px;
+}
+
+.heroTexto,
+.heroImagem {
+width: 100%;
+}
+
+.heroTexto {
+text-align: center;
+}
+
+.heroTag {
+margin: 0 auto 20px;
+}
+
+.heroTitulo {
+font-size: 38px;
+}
+
+.botaoSecundario {
+margin-left: 0;
+margin-top: 10px;
+}
+
+.circulo {
+width: 250px;
+height: 250px;
+margin-top: 40px;
+}
+
+.selo {
+width: 85px;
+height: 85px;
+right: 20px;
+font-size: 14px;
+}
+
+.historia,
+.comoChegar,
+.contato {
+padding: 70px 20px;
+}
+
+.tituloSecao {
+font-size: 34px;
+}
+
+.historiaConteudo,
+.comoChegarConteudo {
+flex-direction: column;
+}
+
+.historiaTexto,
+.historiaCards,
+.mapa,
+.infoEndereco,
+.card {
+width: 100%;
+}
+
+.formulario {
+padding: 25px;
+}
 }
