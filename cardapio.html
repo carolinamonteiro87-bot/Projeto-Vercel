@@ -1,104 +1,398 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Cardápio - Padoka Mágica</title>
-<link rel="stylesheet" href="./css/cardapio.css" />
-<link
-rel="shortcut icon"
-href="assets/img/LogoImage.png"
-type="image/png" />
-</head>
-<body>
-<header id="header" class="header">
-<a href="./index.html#hero" class="logoContainer">
-<img src="./assets/img/LogoImage.png" alt="Logo da Padoka Mágica" />
-<h1>Padoka Mágica</h1>
-</a>
-<nav class="navigation" id="navigation">
-<a href="./index.html#hero">Início</a>
-<a href="./index.html#historia">Sobre</a>
-<a href="./index.html#comoChegar">Como chegar</a>
-<a href="./index.html#contato">Contato</a>
-<a href="./cardapio.html">Cardápio</a>
-</nav>
-<button class="menuToggle" id="menuToggle" aria-label="Abrir menu">☰</button>
-</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cardápio | Padoka Mágica</title>
+    <link rel="stylesheet" href="./css/cardapio.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/LogoImage.png"
+      type="image/png"
+    />
+  </head>
+  <body>
+    <header id="header" class="header">
+      <a href="./index.html#hero" class="logoContainer">
+        <img src="./assets/img/LogoImage.png" alt="Logo da Padoka Mágica" />
+        <h1>Padoka Mágica</h1>
+      </a>
 
-<main id="content" class="content">
-<section class="cardapioSecao">
-<h2 class="tituloSecao">Nosso Cardápio</h2>
-<p class="cardapioTexto">Conheça nossas delícias inspiradas no universo de Mitakihara!</p>
+      <nav class="navigation">
+        <a href="./index.html#hero">Início</a>
+        <a href="./index.html#historia">Sobre</a>
+        <a href="./index.html#comoChegar">Como chegar</a>
+        <a href="./index.html#contato">Contato</a>
+        <a href="./cardapio.html" class="paginaAtual">Cardápio</a>
+      </nav>
+    </header>
 
-<div class="cardapioGrid">
-<div class="cardProduto">
-<h3>Croissant Rosa da Madoka</h3>
-<p>Massa folhada leve e amanteigada com toque especial de morango.</p>
-<span class="preco">R$ 12,00</span>
-</div>
-<div class="cardProduto">
-<h3>Pão de Queijo da Charlotte</h3>
-<p>Quentinho, recheado e irresistível (cuidado para não morder antes).</p>
-<span class="preco">R$ 8,00</span>
-</div>
-<div class="cardProduto">
-<h3>Torta Tiro Finale da Mami</h3>
-<p>Torta de maçã com canela e muito afeto.</p>
-<span class="preco">R$ 18,00</span>
-</div>
-<div class="cardProduto">
-<h3>Taiyaki de Maçã do Amor da Kyoko</h3>
-<p>Clássico formato de peixe crocante com recheio adocicado.</p>
-<span class="preco">R$ 10,00</span>
-</div>
-<div class="cardProduto">
-<h3>Sonho Azul Oceano da Sayaka</h3>
-<p>Recheio cremoso azulado de creme baunilha e amor.</p>
-<span class="preco">R$ 9,00</span>
-</div>
-<div class="cardProduto">
-<h3>Pão Integral Loop Temporal da Homura</h3>
-<p>Assado e reassado perfeitamente em múltiplos loops.</p>
-<span class="preco">R$ 14,00</span>
-</div>
-</div>
-</section>
-</main>
+    <main id="content" class="content">
+      <section id="cardapioTopo" class="cardapioTopo">
+        <p class="cardapioTag">Feito hoje, sem contrato escondido</p>
+        <h1 class="cardapioTitulo">Cardápio</h1>
+        <p class="cardapioSubtitulo">
+          Escolha a quantidade de cada item e veja quanto vai custar a sua
+          visita à Padoka Mágica.
+        </p>
+      </section>
 
-<footer id="footer" class="footer" style="height: var(--altura-footer);">
-<div class="footerContainer">
-<div class="footerColuna">
-<p class="footerLogo">Padoka Mágica</p>
-<p>
-Padaria artesanal de Mitakihara desde 2011. Pão quentinho, chá da
-tarde e nenhum contrato escondido.
-</p>
-</div>
-<div class="footerColuna">
-<h3>Navegação</h3>
-<a href="./index.html#hero">Início</a>
-<a href="./index.html#historia">Sobre</a>
-<a href="./index.html#comoChegar">Como chegar</a>
-<a href="./index.html#contato">Contato</a>
-<a href="./cardapio.html">Cardápio</a>
-</div>
-<div class="footerColuna">
-<h3>Fale com a gente</h3>
-<p>(11) 1234-5678</p>
-<p>(11) 91234-5678</p>
-<p>contato@padokamagica.br</p>
-<p>@padokamagica</p>
-</div>
-</div>
-<div class="copyright">
-<p>
-&copy; 2026 Padoka Mágica. Todos os direitos reservados. Nenhuma Soul
-Gem foi escurecida no preparo dos nossos produtos.
-</p>
-</div>
-</footer>
+      <form id="formCardapio" class="cardapioConteudo" action="#">
+        <div class="listaCategorias">
+          <section id="cafeDaManha" class="categoria">
+            <div class="categoriaCabecalho">
+              <h2>Café da Manhã</h2>
+              <p>Servido todos os dias, das 6h às 11h.</p>
+            </div>
+            <div class="listaItens">
+              <div class="item">
+                <h3 class="itemNome">Café da Manhã da Família Kaname</h3>
+                <p class="itemDescricao">
+                  Pão na chapa, ovos mexidos, frutas da horta do Seu Tomohisa,
+                  suco de laranja e café com leite
+                </p>
+                <p class="itemPreco">R$ 32,90</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Pão na Chapa de Mitakihara</h3>
+                <p class="itemDescricao">
+                  Pão francês tostado na chapa com bastante manteiga.
+                </p>
+                <p class="itemPreco">R$ 7,50</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Tapioca do Labirinto</h3>
+                <p class="itemDescricao">
+                  Queijo coalho e goiabada. Entrar é fácil, difícil é parar de
+                  comer.
+                </p>
+                <p class="itemPreco">R$ 14,90</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Ovos Mexidos do Seu Tomohisa</h3>
+                <p class="itemDescricao">
+                  Ovos cremosos com ervas da horta e duas torradas.
+                </p>
+                <p class="itemPreco">R$ 16,90</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Iogurte Kyubey</h3>
+                <p class="itemDescricao">
+                  Iogurte natural com granola e mel. Branquinho e inocente, pelo
+                  menos na aparência.
+                </p>
+                <p class="itemPreco">R$ 13,90</p>
+              </div>
+            </div>
+          </section>
 
-<script src="./js/app.js"></script>
-</body>
+          <section id="paes" class="categoria">
+            <div class="categoriaCabecalho">
+              <h2>Pães</h2>
+              <p>
+                Fornadas novas a cada hora, enquanto a padaria estiver aberta.
+              </p>
+            </div>
+            <div class="listaItens">
+              <div class="item">
+                <h3 class="itemNome">Croissant Rosa da Madoka</h3>
+                <p class="itemDescricao">
+                  Massa folhada amanteigada com recheio de morango.
+                </p>
+                <p class="itemPreco">R$ 12,90</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Pão de Queijo da Charlotte</h3>
+                <p class="itemDescricao">
+                  Porção com 6 unidades, quentinhas. A Charlotte não divide o
+                  queijo com ninguém.
+                </p>
+                <p class="itemPreco">R$ 9,90</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Pão Integral Loop Temporal da Homura</h3>
+                <p class="itemDescricao">
+                  Pão inteiro de fermentação natural, refeito até sair perfeito.
+                </p>
+                <p class="itemPreco">R$ 18,90</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Pão Francês Mitakihara</h3>
+                <p class="itemDescricao">
+                  Saquinho com 6 unidades, crocantes por fora e macias por
+                  dentro.
+                </p>
+                <p class="itemPreco">R$ 6,00</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="doces" class="categoria">
+            <div class="categoriaCabecalho">
+              <h2>Doces</h2>
+              <p>Para acompanhar o chá da tarde ou levar para casa.</p>
+            </div>
+            <div class="listaItens">
+              <div class="item">
+                <h3 class="itemNome">Torta Tiro Finale da Mami</h3>
+                <p class="itemDescricao">
+                  Fatia de torta de queijo com calda de frutas vermelhas. Tiro
+                  certo.
+                </p>
+                <p class="itemPreco">R$ 16,90</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Taiyaki de Maçã do Amor da Kyoko</h3>
+                <p class="itemDescricao">
+                  Bolinho japonês em forma de peixe, recheado com maçã
+                  caramelizada.
+                </p>
+                <p class="itemPreco">R$ 11,90</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Sonho Azul Oceano da Sayaka</h3>
+                <p class="itemDescricao">
+                  Sonho recheado com creme de baunilha e cobertura azul.
+                </p>
+                <p class="itemPreco">R$ 9,50</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Rosquinha Soul Gem</h3>
+                <p class="itemDescricao">
+                  Glacê brilhante nas cores das cinco garotas mágicas. Escolha a
+                  sua.
+                </p>
+                <p class="itemPreco">R$ 7,90</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Brigadeiro Grief Seed</h3>
+                <p class="itemDescricao">
+                  Chocolate meio amargo, escurinho por fora. Absorve toda a
+                  tristeza do dia.
+                </p>
+                <p class="itemPreco">R$ 4,50</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="lanches" class="categoria">
+            <div class="categoriaCabecalho">
+              <h2>Lanches</h2>
+              <p>Do balcão para a mesa, a qualquer hora do dia.</p>
+            </div>
+            <div class="listaItens">
+              <div class="item">
+                <h3 class="itemNome">Misto Quente do Contrato</h3>
+                <p class="itemDescricao">
+                  Presunto e queijo no pão de forma. Sem letras miúdas,
+                  prometido.
+                </p>
+                <p class="itemPreco">R$ 14,90</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Bauru da Mami</h3>
+                <p class="itemDescricao">
+                  Rosbife, queijo derretido, tomate e picles no pão francês.
+                </p>
+                <p class="itemPreco">R$ 22,90</p>
+              </div>
+              <div class="item">
+                <h3 class="item">NomeCoxinha do Jardim da Gertrud</h3>
+                <p class="itemDescricao">
+                  Coxinha de frango com catupiry. A bruxa das rosas aprovaria.
+                </p>
+                <p class="itemPreco">R$ 8,90</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Sanduíche Natural da Hitomi</h3>
+                <p class="itemDescricao">
+                  Pão integral, frango desfiado, cenoura, alface e requeijão.
+                </p>
+                <p class="itemPreco">R$ 16,90</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Onigiri da Homura</h3>
+                <p class="itemDescricao">
+                  Dois bolinhos de arroz recheados com salmão, embrulhados em
+                  alga.
+                </p>
+                <p class="itemPreco">R$ 13,90</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="almocos" class="categoria">
+            <div class="categoriaCabecalho">
+              <h2>Almoços comerciais</h2>
+              <p>De segunda a sábado, das 11h às 15h</p>
+            </div>
+            <div class="listaItens">
+              <div class="item">
+                <h3 class="itemNome">Feijoada Mágica</h3>
+                <p class="itemDescricao">
+                  Feijoada completa com arroz, couve, farofa, torresmo e
+                  laranja. Às quartas e aos sábados.
+                </p>
+                <p class="itemPreco">R$ 42,90</p>
+              </div>
+              <div class="item">
+                <h3 class="item">PF do Labirinto</h3>
+                <p class="itemDescricao">
+                  Arroz, feijão, bife acebolado, batata frita e salada. Não tem
+                  como se perder.
+                </p>
+                <p class="itemPreco">R$ 32,90</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Yakisoba Walpurgisnacht</h3>
+                <p class="itemDescricao">
+                  Macarrão salteado com carne, frango e legumes. Porção grande
+                  para qualquer noite difícil.
+                </p>
+                <p class="itemPreco">R$ 36,90</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Bentô da Mami</h3>
+                <p class="itemDescricao">
+                  Arroz, karaage (frango frito japonês), tamagoyaki, legumes e
+                  conserva, na caixinha.
+                </p>
+                <p class="itemPreco">R$ 39,90</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Karê de Mitakihara</h3>
+                <p class="itemDescricao">
+                  Curry japonês com carne e legumes, servido com arroz.
+                </p>
+                <p class="itemPreco">R$ 34,90</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="bebidas" class="categoria">
+            <div class="categoriaCabecalho">
+              <h2>Bebidas</h2>
+              <p>Quentes e geladas, todas sem álcool.</p>
+            </div>
+            <div class="listaItens">
+              <div class="item">
+                <h3 class="itemNome">Café Walpurgisnacht</h3>
+                <p class="itemDescricao">
+                  Café coado extra forte, para enfrentar o dia.
+                </p>
+                <p class="itemPreco">R$ 6,50</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Chá da Tarde da Mami</h3>
+                <p class="itemDescricao">
+                  Bule de chá preto com leite e biscoitinhos, para dividir.
+                </p>
+                <p class="itemPreco">R$ 12,90</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Chocolate Quente Rosa da Madoka</h3>
+                <p class="itemDescricao">
+                  Chocolate branco cremoso com calda de morango.
+                </p>
+                <p class="itemPreco">R$ 11,90</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Limonada Azul Oceano da Sayaka</h3>
+                <p class="itemDescricao">
+                  Limonada com xarope de blue curaçao sem álcool.
+                </p>
+                <p class="itemPreco">R$ 10,90</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Chá Gelado de Maçã da Kyoko</h3>
+                <p class="itemDescricao">
+                  Chá preto gelado com pedaços de maçã. Toma um, ela insiste.
+                </p>
+                <p class="itemPreco">R$ 8,90</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="drinques" class="categoria">
+            <div class="categoriaCabecalho">
+              <h2>Drinques</h2>
+              <p>Bebidas alcoólicas: venda proibida para menores de 18 anos.</p>
+            </div>
+            <div class="listaItens">
+              <div class="item">
+                <h3 class="itemNome">Drinque Soul Gem</h3>
+                <p class="itemDescricao">
+                  Gin, tônica e flor de hibisco. Muda de cor quando você mexe.
+                </p>
+                <p class="itemPreco">R$ 32,00</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Negroni Grief Seed</h3>
+                <p class="itemDescricao">
+                  Gin, vermute e bitter. Escuro e amargo como uma Grief Seed
+                  cheia.
+                </p>
+                <p class="itemPreco">R$ 34,00</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Caipirinha do Incubador</h3>
+                <p class="itemDescricao">
+                  Cachaça, limão e açúcar. O Kyubey jura que não tem contrato.
+                  Desconfie.
+                </p>
+                <p class="itemPreco">R$ 26,00</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Chopp Mitakihara</h3>
+                <p class="itemDescricao">
+                  Pilsen bem gelado, tirado na hora. Copo de 300 ml.
+                </p>
+                <p class="itemPreco">R$ 14,00</p>
+              </div>
+              <div class="item">
+                <h3 class="item">Saquê Lei dos Ciclos</h3>
+                <p class="itemDescricao">
+                  Dose de saquê, quente ou gelado. Tudo volta ao começo.
+                </p>
+                <p class="itemPreco">R$ 22,00</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </form>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footerContainer">
+        <div class="footerColuna">
+          <p class="footerLogo">Padoka Mágica</p>
+          <p>
+            Padaria artesanal de Mitakihara desde 2011. Pão quentinho, chá da
+            tarde e nenhum contrato escondido.
+          </p>
+        </div>
+        <div class="footerColuna">
+          <h3>Navegação</h3>
+          <a href="./index.html#hero">Início</a>
+          <a href="./index.html#historia">Sobre</a>
+          <a href="./index.html#comoChegar">Como chegar</a>
+          <a href="./index.html#contato">Contato</a>
+          <a href="./cardapio.html">Cardápio</a>
+        </div>
+        <div class="footerColuna">
+          <h3>Fale com a gente</h3>
+          <p>(11) 1234-5678</p>
+          <p>(11) 91234-5678</p>
+          <p>contato@padokamagica.br</p>
+          <p>@padokamagica</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          &copy; 2026 Padoka Mágica. Todos os direitos reservados. Nenhuma Soul
+          Gem foi escurecida no preparo dos nossos produtos.
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
